@@ -37,7 +37,7 @@ carsModel.create(
         },
     ]
 )
-carsModel.findById(
+/*carsModel.findById(
     "6046393fb4a6442acc0d4945"
 ).then((response) => console.log(response));
 
@@ -62,3 +62,23 @@ carsModel.deleteMany(
 ).then((response) => {
     console.log(response);
 })
+
+carsModel.insertMany(
+   [ {
+        brand:"Aston Martin",
+        model:"DB9",
+        year:2010,
+
+    },
+    {
+        brand:"Range Rover",
+        model:"Discovery Sport",
+        year:2017,
+
+    },]
+).then((response)=>{
+    console.log(response)
+})*/ 
+carsModel.find(
+    {year : {$gt: 2015},}
+).then((response) => console.log(response));
